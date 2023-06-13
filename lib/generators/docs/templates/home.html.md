@@ -16,15 +16,15 @@
   - Add the following to your `Gemfile`:
 
     ```ruby
-    gem 'docs'
+    gem 'doc_pages'
     ```
   - Run `bundle install`
   - Or install it yourself as:
 
     ```bash
-    $ bundle add docs
+    $ bundle add doc_pages
     ```
-  - Run `rails g docs install`
+  - Run `rails g doc_pages install`
 
 
 ### <span id="adding-pages">Adding Pages</span>

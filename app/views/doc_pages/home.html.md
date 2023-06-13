@@ -16,7 +16,7 @@
   - Add the following to your `Gemfile`:
 
     ```ruby
-    gem 'docs'
+    gem 'doc_pages'
     ```
   - Run `bundle install`
   - Or install it yourself as:
