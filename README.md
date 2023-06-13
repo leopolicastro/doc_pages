@@ -1,5 +1,5 @@
 # DocPages
-DocPages is a Rails engine that provides a simple way to add documentation to your Rails application using Markdown.  Create your documentation files in the `app/views/docs` directory with the `.html.md` extension and navigate to `/docs` to see it in action.
+DocPages is a Rails engine that provides a simple way to add documentation to your Rails application using Markdown.  Create your documentation files in the `app/views/docs` directory with the `.html.md` extension and navigate to `/docs` to see it in action.  Code snippets are syntax highlighted using Highlight.js.
 
 ## Table of Contents
 - [DocPages](#docpages)
