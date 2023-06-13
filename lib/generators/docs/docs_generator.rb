@@ -12,11 +12,11 @@ class DocsGenerator < Rails::Generators::NamedBase
   private
 
   def copy_views
-    copy_file "_desktop_sidebar.html.erb", "app/views/shared/_desktop_sidebar.html.erb"
-    copy_file "_mobile_sidebar.html.erb", "app/views/shared/_mobile_sidebar.html.erb"
-    copy_file "_pages.html.erb", "app/views/shared/_pages.html.erb"
-    copy_file "_sidebar.html.erb", "app/views/shared/_sidebar.html.erb"
-    copy_file "markdown.html.erb", "app/views/layouts/docs/markdown.html.erb"
+    copy_file File.expand_path("#{DocPages::Engine.root}/app/views/shared/_sidebar.html.erb"), "app/views/shared/_sidebar.html.erb"
+    copy_file File.expand_path("#{DocPages::Engine.root}/app/views/shared/_desktop_sidebar.html.erb"), "app/views/shared/_desktop_sidebar.html.erb"
+    copy_file File.expand_path("#{DocPages::Engine.root}/app/views/shared/_mobile_sidebar.html.erb"), "app/views/shared/_mobile_sidebar.html.erb"
+    copy_file File.expand_path("#{DocPages::Engine.root}/app/views/shared/_pages.html.erb"), "app/views/shared/_pages.html.erb"
+    copy_file File.expand_path("#{DocPages::Engine.root}/app/views/layouts/doc_pages/markdown.html.erb"), "app/views/layouts/markdown.html.erb"
   end
 
   def install
