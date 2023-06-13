@@ -1,0 +1,42 @@
+module DocPages
+  module ApplicationHelper
+     def doc_page_ids
+      HighVoltage.page_ids - ["home"]
+    end
+
+    def group_by_folder
+      doc_page_ids.filter { |id| id.include?("/") }.group_by { |id| id.split("/").first }
+    end
+
+    def without_a_folder
+      doc_page_ids.reject { |id| id.include?("/") }
+    end
+
+    def render_orphans
+      without_a_folder.map { |page| link_to_page(page) }.join("").html_safe
+    end
+
+    def group_by_folder_and_render
+      group_by_folder.map do |folder, pages|
+        <<-ERB
+          <div class="flex flex-col gap-y-2 mb-5">
+            <h2 class="text-white font-semibold text-lg hover:cursor-pointer js-folders">#{folder.titleize}</h2>
+            <ul class="flex flex-col gap-y-2 hidden js-toggle-hidden">
+              #{pages.map { |page| link_to_page(page) }.join("").html_safe}
+            </ul>
+            <div class="border-b"></div>
+          </div>
+
+        ERB
+      end.join("").html_safe
+    end
+
+    def link_to_page(page)
+      <<-ERB
+        <li>
+          #{link_to page.split("/").last.titleize, doc_path(page), data: {turbo: false}, class: "text-white group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"}
+        </li>
+      ERB
+    end
+  end
+end
