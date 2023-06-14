@@ -1,9 +1,9 @@
 require_relative "lib/doc_pages/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "doc_pages"
-  spec.version     = DocPages::VERSION
- spec.authors = ["lbp"]
+  spec.name = "doc_pages"
+  spec.version = DocPages::VERSION
+  spec.authors = ["lbp"]
   spec.email = ["43428385+leopolicastro@users.noreply.github.com"]
   spec.homepage = "https://github.com/leopolicastro/docs"
   spec.summary = "Summary of Docs."
@@ -21,4 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rails", ">= 7.0.5"
   spec.add_dependency "redcarpet"
   spec.add_dependency "high_voltage"
+
+  spec.add_development_dependency "standard"
+  spec.add_development_dependency "overcommit"
 end
