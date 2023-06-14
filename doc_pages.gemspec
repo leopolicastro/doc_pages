@@ -21,5 +21,4 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rails", ">= 7.0.5"
   spec.add_dependency "redcarpet"
   spec.add_dependency "high_voltage"
-  spec.add_dependency "tailwindcss-rails"
 end
