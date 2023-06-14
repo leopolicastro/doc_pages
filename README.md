@@ -28,7 +28,7 @@ Or install it yourself as:
 $ gem install doc_pages
 ```
 ## <span id="getting-started">Getting Started</span>
-- Run `rails g doc_pages install`
+- Run `rails g docs install`
 
 ## <span id="adding-pages">Adding Pages</span>
 

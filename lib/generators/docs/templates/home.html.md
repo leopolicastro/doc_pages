@@ -24,7 +24,7 @@
     ```bash
     $ bundle add doc_pages
     ```
-  - Run `rails g doc_pages install`
+  - Run `rails g docs install`
 
 
 ### <span id="adding-pages">Adding Pages</span>
