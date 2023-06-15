@@ -26,17 +26,14 @@ class DocsGenerator < Rails::Generators::NamedBase
   end
 
   def mount_engine
-    puts "Mounting Docs::Engine at \"/docs\" in config/routes.rb"
     route "mount DocPages::Engine, at: \"/docs\""
   end
 
   def copy_home_page
-    puts "Copying home page to app/views/docs/home.html.md"
     copy_file "home.html.md", "app/views/docs/home.html.md"
   end
 
   def append_to_manifest
-    puts "Appending to app/assets/config/manifest.js"
     append_to_file "app/assets/config/manifest.js" do
       "//= link doc_pages/application.css\n"
     end
