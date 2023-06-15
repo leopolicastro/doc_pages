@@ -19,7 +19,6 @@ module Handlers
         superscript: true,
         lax_spacing: true,
         space_after_headers: true
-        # disable_indented_code_blocks: true # ????
       )
       "#{markdown.render(source).inspect}.html_safe"
     end
