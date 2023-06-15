@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    doc_pages (0.1.2)
+    doc_pages (0.1.3)
       high_voltage
       rails (>= 7.0.5)
       redcarpet

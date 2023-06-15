@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version = DocPages::VERSION
   spec.authors = ["lbp"]
   spec.email = ["43428385+leopolicastro@users.noreply.github.com"]
-  spec.homepage = "https://github.com/leopolicastro/docs"
+  spec.homepage = "https://github.com/leopolicastro/doc_pages"
   spec.summary = "Summary of Docs."
   spec.description = "Description of Docs."
   spec.license = "MIT"

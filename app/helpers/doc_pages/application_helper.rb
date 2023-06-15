@@ -24,7 +24,6 @@ module DocPages
             <ul class="flex flex-col gap-y-2 hidden js-toggle-hidden">
               #{pages.map { |page| link_to_page(page) }.join.html_safe}
             </ul>
-            <div class="border-b"></div>
           </div>
         ERB
       end.join("").html_safe
@@ -33,7 +32,8 @@ module DocPages
     def link_to_page(page)
       <<~ERB
         <li>
-          #{link_to page.split("/").last.titleize, doc_path(page), data: {turbo: false}, class: "text-white group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"}
+          #{link_to page.split("/").last.titleize, doc_path(page), data: {turbo: false},
+            class: "text-white group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold hover:bg-gray-700 hover:text-white"}
         </li>
       ERB
     end
